@@ -4,9 +4,7 @@
  * and open the template in the editor.
  */
 package proyectoUltimo;
-
 import java.util.Scanner;
-
 /**
  *
  * @author Yojan Rodríguez
