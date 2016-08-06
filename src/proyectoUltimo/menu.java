@@ -9,19 +9,19 @@ import java.util.Scanner;
  *
  * @author Yojan Rodríguez
  * @date 23-07-2016
- */
+ **/
 public class menu {
    /**
      *
      */
     public static void mostrarMenu() {
         Scanner sc = new Scanner(System.in);
-        System.out.println("=========================");
+        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~");
         System.out.println("BUSCAMINAS");
-        System.out.println("=========================");
+        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~");
         System.out.println("Menu:");
-        System.out.println("1. Jugar Nivel Principiante");
-        System.out.println("2. Salir");
+        System.out.println("1.   Jugar Nivel  ");
+        System.out.println("2.    Salir    ");
         System.out.println("");
         System.out.print("Selecciona una opción [1-2]: ");
         int opcion = sc.nextInt();
