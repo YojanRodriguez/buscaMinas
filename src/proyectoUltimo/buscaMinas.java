@@ -5,6 +5,7 @@
  */
 package proyectoUltimo;
 import static proyectoUltimo.menu.mostrarMenu;
+import static proyectoUltimo.movidas.movidas;
 import static proyectoUltimo.tablero.columnas;
 import static proyectoUltimo.tablero.filas;
 import static proyectoUltimo.tablero.iniciaTablero;
@@ -37,9 +38,11 @@ public class buscaMinas {
                 if (devolucion) {
                     tablero(filas, columnas, matriz);
                     System.out.println("");
+                    movidas();
                 }
                 tablero(filas, columnas, matriz2);
                 System.out.println("");
+                movidas();
             }
         }
     }

@@ -27,21 +27,21 @@ public class tablero {
      */
     public static void tablero(int length, int length0, char[][] matriz) {
         System.out.println("Tablero de juego");
-        for (int i = 1; i < length; i++) {
-            if (i == 1) {
+        for (int t = 1; t < length; t++) {
+            if (t == 1) {
                 System.out.println("---------------------------------");
             }
-            System.out.printf("%4s", i + " ");
-            for (int j = 1; j < length0; j++) {
-                System.out.printf("%s", "|" + matriz[i][j] + "|");
+            System.out.printf("%4s", t + " ");
+            for (int c = 1; c < length0; c++) {
+                System.out.printf("%s", "|" + matriz[t][c] + "|");
             }
-            if (i == length - 1) {
+            if (t == length - 1) {
                 System.out.println("");
-                for (int j = 1; j < columnas; j++) {
-                    if (j == 1) {
+                for (int c = 1; c < columnas; c++) {
+                    if (c == 1) {
                         System.out.print("    ");
                     }
-                    System.out.printf("%3s", j + " ");
+                    System.out.printf("%3s", c + " ");
                 }
             }
             System.out.println("");
@@ -53,14 +53,14 @@ public class tablero {
     public static void iniciaTablero() {
         char[][] matriz = new char[1][1];
         char[][] matriz2 = new char[1][1];
-        for (int l = 1; l < filas; l++) {
-            for (int m = 1; m < columnas; m++) {
-                matriz2[l][m] = '-';
+        for (int f = 1; f < filas; f++) {
+            for (int c = 1; c < columnas; c++) {
+                matriz2[f][c] = '-';
             }
         }
-        for (int l = 1; l < filas; l++) {
-            for (int m = 1; m < columnas; m++) {
-                matriz[l][m] = '-';
+        for (int f = 1; f < filas; f++) {
+            for (int c = 1; c < columnas; c++) {
+                matriz[f][c] = '-';
             }
         }
     }
