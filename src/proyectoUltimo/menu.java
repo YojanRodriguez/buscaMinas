@@ -5,12 +5,16 @@
  */
 package proyectoUltimo;
 import java.util.Scanner;
+import static proyectoUltimo.tablero.columnas;
+import static proyectoUltimo.tablero.filas;
+import static proyectoUltimo.movidas.fin;
 /**
  *
  * @author Yojan Rodríguez
  * @date 23-07-2016
  **/
 public class menu {
+    public static int minas = 0;
    /**
      *
      */
@@ -30,6 +34,10 @@ public class menu {
             case 1:
                 System.out.print("Escoje la longitud de tu juego: ");
                 int x = sc.nextInt();
+                filas = x+1;
+                columnas = x+1;
+                minas = filas;
+                fin = (filas * columnas) - x;
                 
                 break;           
             case 2:

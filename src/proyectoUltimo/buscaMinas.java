@@ -5,10 +5,19 @@
  */
 package proyectoUltimo;
 import static proyectoUltimo.menu.mostrarMenu;
+import static proyectoUltimo.minas.colocandoMinas;
+import static proyectoUltimo.minas.minas;
+import static proyectoUltimo.movidas.aumento;
+import static proyectoUltimo.movidas.finPartida;
+import static proyectoUltimo.movidas.mov1;
+import static proyectoUltimo.movidas.mov2;
 import static proyectoUltimo.movidas.movidas;
+import static proyectoUltimo.movidas.movimiento;
 import static proyectoUltimo.tablero.columnas;
 import static proyectoUltimo.tablero.filas;
 import static proyectoUltimo.tablero.iniciaTablero;
+import static proyectoUltimo.tablero.matriz;
+import static proyectoUltimo.tablero.matriz2;
 import static proyectoUltimo.tablero.tablero;
 
 /**
@@ -25,24 +34,27 @@ public class buscaMinas {
     public static void main(String[] args) {
         // TODO code application logic here
         boolean x = false;
-        boolean fipartida = false;
         boolean devolucion = false;
-        char[][] matriz = new char[1][1];
-        char[][] matriz2 = new char[1][1];
-        while (!x) {
-        mostrarMenu();
+            while (!x) {
+            aumento = 0;
+            finPartida = false;
+            mostrarMenu();
             iniciaTablero();
             tablero(filas, columnas, matriz2);
             System.out.println("");
-             while (!fipartida) {
+            movimiento();
+            minas();
+            colocandoMinas();
+            movidas(mov1,mov2);
+             while (!finPartida) {
                 if (devolucion) {
                     tablero(filas, columnas, matriz);
                     System.out.println("");
-                    movidas();
-                }
+                    }
                 tablero(filas, columnas, matriz2);
                 System.out.println("");
-                movidas();
+                movimiento();
+                movidas(mov1, mov2);
             }
         }
     }
