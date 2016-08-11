@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package proyectoUltimo;
-
+// Creacion de importes
 import java.util.Random;
 import static proyectoUltimo.menu.minas;
 import static proyectoUltimo.movidas.mov1;
@@ -13,11 +13,12 @@ import static proyectoUltimo.tablero.columnas;
 import static proyectoUltimo.tablero.filas;
 import static proyectoUltimo.tablero.matriz;
 /**
- *
- * @author Yojan Rodríguez
- * @date 02-06-2016
+ **
+ ** @author Yojan Rodríguez
+ ** @date 02-06-2016
  **/
 public class minas {
+    public static boolean full = false;
      /**
      * @see randNumero Crea un numero aleatorio para disponer las minas
      * @param sup Limite del rango númerico
@@ -30,10 +31,9 @@ public class minas {
     }
     /**
      * @see intrMinas Introduce las minas en el tablero de juego de manera
-     * aleatoria y de manera que no coincida con la primera casilla destapada
+     * aleatoria y de manera que no coincidan
      */
     public static void minas() {
-        boolean full = false;
         int i = 0;
         out:
         while (i <= minas) {
@@ -41,7 +41,7 @@ public class minas {
                 for (int c = 1; c < columnas; c++) {
                     int mina = randNumero(columnas);
                     if ((c == mina) && (matriz[f][c] == '-') && (f != mov1 && c != mov2)) {
-                        matriz[f][c] = '*';
+                        matriz[f][c] = '*';// como son las minas
                         ++i;
                         if (i == minas) {
                             break out;
@@ -51,6 +51,9 @@ public class minas {
             }
         }
     }
+    /**
+     *
+     */
     public static void colocandoMinas() {
       int count = 0;
         for (int n = 2; n <= matriz.length - 2; ++n) {

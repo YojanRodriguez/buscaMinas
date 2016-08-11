@@ -4,35 +4,35 @@
  * and open the template in the editor.
  */
 package proyectoUltimo;
-
+// Creacion de importes
 import java.util.Scanner;
+import static proyectoUltimo.menu.fin;
 import static proyectoUltimo.tablero.columnas;
 import static proyectoUltimo.tablero.filas;
 import static proyectoUltimo.tablero.matriz;
 import static proyectoUltimo.tablero.matriz2;
 /**
- *
- * @author Yojan Rodríguez
- * @date 27-07-2016
+ **
+ ** @author Yojan Rodríguez
+ ** @date 27-07-2016
  **/
 public class movidas {
+     // Creacion de de variables estaticas    
      public static int mov1=0;
      public static int mov2=0;
      public static boolean finPartida = false;
-     public static int aumento = 0;
-     public static int fin = 0;
-         /**
+     public static int aumento = 0;  
+     /**
      * @see introMovim Introduce el movimiento del jugador en el juego
      */
-    public static void movimiento() {              
+    public static void movimiento() {
         Scanner sc = new Scanner(System.in);
         boolean valid = false;
         while (!valid) {
-            System.out.println("Introduce tu movida");
-            System.out.println("  ");
-            System.out.print("Introduce la fila ");
-            mov1 = sc.nextInt();
+            System.out.println("Introduce tu movimiento!");
             System.out.print("Introduce la columna ");
+            mov1 = sc.nextInt();
+            System.out.print("Introduce la fila ");
             mov2 = sc.nextInt();
             System.out.println("");
             if ((mov1 < filas && mov2 < columnas) && (mov1 > 0 && mov2 > 0)) {
@@ -54,10 +54,13 @@ public class movidas {
         if (casilla > filas - 1 || casilla < 0 || casilla2 > columnas - 1 || casilla2 < 0) {
             return;
         }
-        if (matriz[casillorg][casill2org] == '*') {
-            finPartida = true;
+        if (matriz[casillorg][casill2org] == '*') { 
+            finPartida= true;
             System.out.println("BOOM!!");
             System.out.println("");
+            System.out.println("");
+            System.out.println("");
+            System.out.println("=======================================================================================================");
         } else if (matriz[casilla][casilla2] == '0') {
             if (matriz2[casilla][casilla2] != matriz[casilla][casilla2]) {
                 matriz2[casilla][casilla2] = matriz[casilla][casilla2];

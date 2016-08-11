@@ -4,21 +4,21 @@
  * and open the template in the editor.
  */
 package proyectoUltimo;
-
+// Creacion de importes
 import java.util.Random;
-
 /**
- *
- * @author Yojan Rodríguez
- * @date 24-07-2016
+ **
+ ** @author Yojan Rodríguez
+ ** @date 24-07-2016
  **/
 public class tablero {
     /**
      *creacion de la variable columnas como pública estatica
      */
+    // Creacion de de variables estaticas 
    public static int columnas = 0;
-   public static char[][] matriz = new char[17][31];
-   public static char[][] matriz2 = new char[17][31];
+   public static char[][] matriz = new char[10][10];
+   public static char[][] matriz2 = new char[10][10];
     /**
      *creacion de la variable filas como pública estatica
      */

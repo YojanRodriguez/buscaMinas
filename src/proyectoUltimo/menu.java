@@ -4,17 +4,19 @@
  * and open the template in the editor.
  */
 package proyectoUltimo;
+// Creacion de importes
 import java.util.Scanner;
 import static proyectoUltimo.tablero.columnas;
 import static proyectoUltimo.tablero.filas;
-import static proyectoUltimo.movidas.fin;
 /**
- *
- * @author Yojan Rodríguez
- * @date 23-07-2016
+ **
+ ** @author Yojan Rodríguez
+ ** @date 23-07-2016
  **/
 public class menu {
-    public static int minas = 0;
+     // Creacion de de variables estaticas
+    public static int minas = 1;
+    public static int fin = 0;
    /**
      *
      */
@@ -32,14 +34,23 @@ public class menu {
         System.out.println("");
         switch (opcion) {
             case 1:
-                System.out.print("Escoje la longitud de tu juego: ");
+                System.out.println("Escoje la longitud mayor a 2: ");
                 int x = sc.nextInt();
+                if(x>=3){
                 filas = x+1;
                 columnas = x+1;
-                minas = filas;
+                minas = filas-1;
                 fin = (filas * columnas) - x;
-                
-                break;           
+                }
+                else{
+                    System.out.println("Lo sentimos esta opcion no se puede realizar");
+                    System.out.println("Vamos a darle un juego por defaut");
+                filas = 4; // son 4 porque tiene que rellenar la primera fila con números
+                columnas = 4; // son 4 porque tiene que rellenar la primera columna con numeros
+                minas = 3;
+                fin = (filas * columnas) - 3;
+                }
+                break;  
             case 2:
                System.exit(0);
                 break;
